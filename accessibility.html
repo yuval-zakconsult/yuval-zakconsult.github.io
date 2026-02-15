@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility Statement — Zak Consult</title>
+  <meta name="description" content="Accessibility statement for the Zak Consult website, in accordance with Israeli Standard SI 5568 and WCAG 2.1 Level AA.">
+  <link rel="icon" type="image/png" href="ZCC_logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .a11y-page {
+      padding: 140px 0 100px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .a11y-page h1 {
+      font-size: 2.25rem;
+      margin-bottom: 8px;
+    }
+    .a11y-page .subtitle {
+      color: var(--gray-600);
+      margin-bottom: 48px;
+      font-size: 1.1rem;
+    }
+    .a11y-page h2 {
+      font-size: 1.35rem;
+      margin: 36px 0 12px;
+    }
+    .a11y-page p, .a11y-page li {
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .a11y-page ul {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    .a11y-page a {
+      color: var(--cyan-dark);
+      text-decoration: underline;
+    }
+    .a11y-page .contact-box {
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-top: 16px;
+    }
+    .a11y-page .contact-box p {
+      margin-bottom: 4px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 32px;
+      color: var(--cyan-dark);
+      text-decoration: underline;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" aria-label="Main navigation">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Zak Consult — Back to homepage">
+        <img src="ZCC_logo.png" alt="Zak Consult Logo">
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#approach">Approach</a></li>
+        <li><a href="index.html#why-us">Why Us</a></li>
+        <li><a href="index.html#contact" class="btn btn-nav">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <div class="container a11y-page">
+
+      <a href="index.html" class="back-link">&larr; Back to Homepage</a>
+
+      <h1>Accessibility Statement</h1>
+      <p class="subtitle">Last updated: February 2025</p>
+
+      <h2>Our Commitment</h2>
+      <p>Zak Consult is committed to ensuring that our website is accessible to all people, including persons with disabilities. We strive to conform to the Israeli Standard SI 5568, which is based on the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA, as required by the Equal Rights for Persons with Disabilities Regulations (Service Accessibility Accommodations), 2013.</p>
+
+      <h2>Accessibility Features</h2>
+      <p>The following measures have been implemented on this website:</p>
+      <ul>
+        <li><strong>Keyboard Navigation:</strong> All content and interactive elements are fully accessible via keyboard. A visible focus indicator is provided for all interactive elements.</li>
+        <li><strong>Skip Navigation:</strong> A "Skip to main content" link is provided at the top of each page to allow users to bypass repetitive navigation.</li>
+        <li><strong>Semantic HTML:</strong> Proper semantic structure is used throughout, including landmarks (<code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>), heading hierarchy, and ARIA labels where needed.</li>
+        <li><strong>Color Contrast:</strong> Text and interactive elements meet the minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text, as required by WCAG 2.1 AA.</li>
+        <li><strong>Text Resizing:</strong> The website supports text resizing up to 200% without loss of content or functionality. An accessibility toolbar is provided for adjusting font size.</li>
+        <li><strong>Alternative Text:</strong> All meaningful images include descriptive alternative text. Decorative images are marked appropriately.</li>
+        <li><strong>Form Accessibility:</strong> All form fields have visible labels, required fields are clearly indicated, and validation errors are announced to assistive technology via ARIA live regions.</li>
+        <li><strong>Accessibility Toolbar:</strong> A built-in accessibility toolbar allows users to increase or decrease text size, toggle high contrast mode, toggle grayscale, underline all links, and switch to a more readable font.</li>
+        <li><strong>Reduced Motion:</strong> Animations and transitions are automatically disabled for users who have indicated a preference for reduced motion in their operating system settings.</li>
+        <li><strong>Screen Reader Compatibility:</strong> The website has been designed to work with assistive technologies including NVDA and VoiceOver.</li>
+      </ul>
+
+      <h2>Standard Compliance</h2>
+      <p>This website is designed to conform to:</p>
+      <ul>
+        <li>Israeli Standard SI 5568 (based on WCAG 2.1)</li>
+        <li>Web Content Accessibility Guidelines (WCAG) 2.1, Level AA</li>
+        <li>The Equal Rights for Persons with Disabilities Law, 1998</li>
+        <li>The Equal Rights for Persons with Disabilities Regulations (Service Accessibility Accommodations), 2013</li>
+      </ul>
+
+      <h2>Browser & Assistive Technology Compatibility</h2>
+      <p>This website is optimized for use with:</p>
+      <ul>
+        <li>Google Chrome (latest version)</li>
+        <li>Mozilla Firefox (latest version)</li>
+        <li>Microsoft Edge (latest version)</li>
+        <li>Apple Safari (latest version)</li>
+        <li>Screen readers: NVDA, VoiceOver (macOS/iOS)</li>
+      </ul>
+
+      <h2>Known Limitations</h2>
+      <p>While we strive for full accessibility, the following areas may have limitations:</p>
+      <ul>
+        <li>The company logo image contains stylized text that may not be fully readable by all assistive technologies; descriptive alt text is provided as an alternative.</li>
+      </ul>
+
+      <h2>Accessibility Coordinator</h2>
+      <p>If you encounter any accessibility issues on this website, or if you require information in an alternative format, please contact our accessibility coordinator:</p>
+      <div class="contact-box">
+        <p><strong>Email:</strong> <a href="mailto:office@zakconsult.com">office@zakconsult.com</a></p>
+        <p><strong>Subject Line:</strong> Accessibility Issue / Website Accessibility</p>
+      </div>
+      <p>We aim to respond to accessibility feedback within 5 business days and to resolve issues as quickly as possible.</p>
+
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-container">
+      <div class="footer-logo">
+        <img src="ZCC_logo.png" alt="Zak Consult Logo">
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="accessibility.html" aria-current="page">Accessibility Statement</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Zak Consult. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

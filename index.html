@@ -13,16 +13,52 @@
 </head>
 <body>
 
+  <!-- Skip to main content link (accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Accessibility Toolbar -->
+  <div class="a11y-toolbar" id="a11y-toolbar" role="region" aria-label="Accessibility options">
+    <button class="a11y-toggle" id="a11y-toggle" aria-label="Open accessibility menu" aria-expanded="false" aria-controls="a11y-panel">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><circle cx="12" cy="4" r="2"/><path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01H13c-.35-.2-.75-.3-1.19-.26C10.76 7.11 10 8.04 10 9.09V15c0 1.1.9 2 2 2h5v5h2v-5.5c0-1.1-.9-2-2-2h-3v-3.45c1.29 1.07 3.25 1.94 5 1.95zM12.83 18H10c-1.1 0-2-.9-2-2v-4.05l-3.13 3.13L3.46 13.66 8 9.12V15c0 .55.45 1 1 1h4.83l-.83 2z"/></svg>
+    </button>
+    <div class="a11y-panel" id="a11y-panel" role="dialog" aria-label="Accessibility settings" hidden>
+      <h2 class="a11y-panel-title">Accessibility Settings</h2>
+      <div class="a11y-options">
+        <button class="a11y-btn" id="a11y-font-increase" aria-label="Increase font size">
+          <span aria-hidden="true">A+</span> Increase Text
+        </button>
+        <button class="a11y-btn" id="a11y-font-decrease" aria-label="Decrease font size">
+          <span aria-hidden="true">A-</span> Decrease Text
+        </button>
+        <button class="a11y-btn" id="a11y-high-contrast" aria-label="Toggle high contrast mode">
+          <span aria-hidden="true">&#9681;</span> High Contrast
+        </button>
+        <button class="a11y-btn" id="a11y-grayscale" aria-label="Toggle grayscale mode">
+          <span aria-hidden="true">&#9788;</span> Grayscale
+        </button>
+        <button class="a11y-btn" id="a11y-links-underline" aria-label="Toggle underline links">
+          <span aria-hidden="true">U</span> Underline Links
+        </button>
+        <button class="a11y-btn" id="a11y-readable-font" aria-label="Toggle readable font">
+          <span aria-hidden="true">Aa</span> Readable Font
+        </button>
+        <button class="a11y-btn a11y-reset" id="a11y-reset" aria-label="Reset all accessibility settings">
+          Reset All
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Navigation -->
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
     <div class="container nav-container">
-      <a href="#" class="nav-logo">
+      <a href="#" class="nav-logo" aria-label="Zak Consult — Back to homepage">
         <img src="ZCC_logo.png" alt="Zak Consult Logo">
       </a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
-      <ul class="nav-links" id="nav-links">
+      <ul class="nav-links" id="nav-links" role="list">
         <li><a href="#services">Services</a></li>
         <li><a href="#approach">Approach</a></li>
         <li><a href="#why-us">Why Us</a></li>
@@ -31,180 +67,190 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="hero" id="hero">
-    <div class="container hero-container">
-      <div class="hero-content">
-        <h1>Turn Your Data Into <span class="gradient-text">Business Results</span></h1>
-        <p class="hero-subtitle">We help companies define, plan, and execute AI and data science projects — from initial strategy through production deployment.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Start a Conversation</a>
-          <a href="#services" class="btn btn-outline">Our Services</a>
+  <main id="main-content">
+
+    <!-- Hero -->
+    <header class="hero" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1>Turn Your Data Into <span class="gradient-text">Business Results</span></h1>
+          <p class="hero-subtitle">We help companies define, plan, and execute AI and data science projects — from initial strategy through production deployment.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+            <a href="#services" class="btn btn-outline">Our Services</a>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Services -->
-  <section class="section services" id="services">
-    <div class="container">
-      <h2 class="section-title">What We Do</h2>
-      <p class="section-subtitle">End-to-end AI consulting — from defining the right problem to deploying the solution.</p>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+    <!-- Services -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <h2 class="section-title" id="services-title">What We Do</h2>
+        <p class="section-subtitle">End-to-end AI consulting — from defining the right problem to deploying the solution.</p>
+        <div class="services-grid" role="list">
+          <div class="service-card" role="listitem">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>AI Strategy & Roadmap</h3>
+            <p>Identify high-impact AI opportunities aligned with your business goals. We build actionable roadmaps that prioritize ROI and feasibility.</p>
           </div>
-          <h3>AI Strategy & Roadmap</h3>
-          <p>Identify high-impact AI opportunities aligned with your business goals. We build actionable roadmaps that prioritize ROI and feasibility.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <div class="service-card" role="listitem">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            </div>
+            <h3>Data Science & ML Engineering</h3>
+            <p>From exploratory analysis to model development and validation. We build production-grade machine learning systems tailored to your data.</p>
           </div>
-          <h3>Data Science & ML Engineering</h3>
-          <p>From exploratory analysis to model development and validation. We build production-grade machine learning systems tailored to your data.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          <div class="service-card" role="listitem">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3>MLOps & Deployment</h3>
+            <p>Get your models into production reliably. We design pipelines, monitoring, and infrastructure so your AI delivers value continuously.</p>
           </div>
-          <h3>MLOps & Deployment</h3>
-          <p>Get your models into production reliably. We design pipelines, monitoring, and infrastructure so your AI delivers value continuously.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          <div class="service-card" role="listitem">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3>Team Enablement & Training</h3>
+            <p>Upskill your team with hands-on workshops and mentoring in AI, data science, and modern ML practices.</p>
           </div>
-          <h3>Team Enablement & Training</h3>
-          <p>Upskill your team with hands-on workshops and mentoring in AI, data science, and modern ML practices.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0022 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>
+          <div class="service-card" role="listitem">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0022 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>
+            </div>
+            <h3>Generative AI & LLM Integration</h3>
+            <p>Leverage large language models and generative AI for your workflows — from prototyping to secure, scalable deployment.</p>
           </div>
-          <h3>Generative AI & LLM Integration</h3>
-          <p>Leverage large language models and generative AI for your workflows — from prototyping to secure, scalable deployment.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div class="service-card" role="listitem">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3>Project Assessment & Audit</h3>
+            <p>Independent review of your existing AI initiatives. We identify gaps, risks, and opportunities to improve outcomes.</p>
           </div>
-          <h3>Project Assessment & Audit</h3>
-          <p>Independent review of your existing AI initiatives. We identify gaps, risks, and opportunities to improve outcomes.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Approach -->
-  <section class="section approach" id="approach">
-    <div class="container">
-      <h2 class="section-title">Our Approach</h2>
-      <p class="section-subtitle">A structured, transparent process that keeps your business goals at the center.</p>
-      <div class="approach-steps">
-        <div class="step">
-          <div class="step-number">01</div>
-          <h3>Discover</h3>
-          <p>We start by understanding your business, data landscape, and objectives. No assumptions — just clear questions and deep listening.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">02</div>
-          <h3>Define</h3>
-          <p>We translate business needs into well-scoped AI and data science projects with clear success criteria and realistic timelines.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">03</div>
-          <h3>Build</h3>
-          <p>Iterative development with regular checkpoints. We build, test, and validate — keeping you involved at every stage.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">04</div>
-          <h3>Deploy & Scale</h3>
-          <p>We take solutions from notebook to production, with monitoring and documentation so your team can own it going forward.</p>
+    <!-- Approach -->
+    <section class="section approach" id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <h2 class="section-title" id="approach-title">Our Approach</h2>
+        <p class="section-subtitle">A structured, transparent process that keeps your business goals at the center.</p>
+        <div class="approach-steps" role="list">
+          <div class="step" role="listitem">
+            <div class="step-number" aria-hidden="true">01</div>
+            <h3>Discover</h3>
+            <p>We start by understanding your business, data landscape, and objectives. No assumptions — just clear questions and deep listening.</p>
+          </div>
+          <div class="step" role="listitem">
+            <div class="step-number" aria-hidden="true">02</div>
+            <h3>Define</h3>
+            <p>We translate business needs into well-scoped AI and data science projects with clear success criteria and realistic timelines.</p>
+          </div>
+          <div class="step" role="listitem">
+            <div class="step-number" aria-hidden="true">03</div>
+            <h3>Build</h3>
+            <p>Iterative development with regular checkpoints. We build, test, and validate — keeping you involved at every stage.</p>
+          </div>
+          <div class="step" role="listitem">
+            <div class="step-number" aria-hidden="true">04</div>
+            <h3>Deploy & Scale</h3>
+            <p>We take solutions from notebook to production, with monitoring and documentation so your team can own it going forward.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Why Us -->
-  <section class="section why-us" id="why-us">
-    <div class="container">
-      <h2 class="section-title">Why Zak Consult</h2>
-      <div class="why-grid">
-        <div class="why-card">
-          <h3>Practitioner-Led</h3>
-          <p>Our consultants are hands-on data scientists and ML engineers — not slide-deck strategists. We build what we recommend.</p>
-        </div>
-        <div class="why-card">
-          <h3>Business-First Thinking</h3>
-          <p>Technology is a means, not an end. Every recommendation is grounded in measurable business impact.</p>
-        </div>
-        <div class="why-card">
-          <h3>End-to-End Ownership</h3>
-          <p>From problem framing to production deployment, we stay with you through the full lifecycle of your AI project.</p>
-        </div>
-        <div class="why-card">
-          <h3>Knowledge Transfer</h3>
-          <p>We don't create dependency. We build your internal capability so your team can maintain and extend what we deliver.</p>
+    <!-- Why Us -->
+    <section class="section why-us" id="why-us" aria-labelledby="why-us-title">
+      <div class="container">
+        <h2 class="section-title" id="why-us-title">Why Zak Consult</h2>
+        <div class="why-grid" role="list">
+          <div class="why-card" role="listitem">
+            <h3>Practitioner-Led</h3>
+            <p>Our consultants are hands-on data scientists and ML engineers — not slide-deck strategists. We build what we recommend.</p>
+          </div>
+          <div class="why-card" role="listitem">
+            <h3>Business-First Thinking</h3>
+            <p>Technology is a means, not an end. Every recommendation is grounded in measurable business impact.</p>
+          </div>
+          <div class="why-card" role="listitem">
+            <h3>End-to-End Ownership</h3>
+            <p>From problem framing to production deployment, we stay with you through the full lifecycle of your AI project.</p>
+          </div>
+          <div class="why-card" role="listitem">
+            <h3>Knowledge Transfer</h3>
+            <p>We don't create dependency. We build your internal capability so your team can maintain and extend what we deliver.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <h2 class="section-title">Let's Talk</h2>
-      <p class="section-subtitle">Have an AI challenge or opportunity? We'd love to hear about it.</p>
-      <div class="contact-content">
-        <form class="contact-form" id="contact-form" action="https://formspree.io/f/placeholder" method="POST">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required placeholder="Your name">
+    <!-- Contact -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 class="section-title" id="contact-title">Let's Talk</h2>
+        <p class="section-subtitle">Have an AI challenge or opportunity? We'd love to hear about it.</p>
+        <div class="contact-content">
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/placeholder" method="POST" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name <span class="required" aria-label="required">*</span></label>
+                <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name" aria-required="true">
+                <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email <span class="required" aria-label="required">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="you@company.com" autocomplete="email" aria-required="true">
+                <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
+              </div>
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required placeholder="you@company.com">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?">
             </div>
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="What's this about?">
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project or challenge..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
-        </form>
-        <div class="contact-info">
-          <div class="contact-info-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <div>
-              <h4>Email Us</h4>
-              <a href="mailto:office@zakconsult.com">office@zakconsult.com</a>
+            <div class="form-group">
+              <label for="message">Message <span class="required" aria-label="required">*</span></label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project or challenge..." aria-required="true"></textarea>
+              <span class="form-error" id="message-error" role="alert" aria-live="polite"></span>
             </div>
-          </div>
-          <div class="contact-info-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <div>
-              <h4>Based In</h4>
-              <p>Working globally with clients worldwide</p>
+            <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+          </form>
+          <div class="contact-info">
+            <div class="contact-info-item">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <div>
+                <h4>Email Us</h4>
+                <a href="mailto:office@zakconsult.com">office@zakconsult.com</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <h4>Based In</h4>
+                <p>Working globally with clients worldwide</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container footer-container">
       <div class="footer-logo">
         <img src="ZCC_logo.png" alt="Zak Consult Logo">
       </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="accessibility.html">Accessibility Statement</a>
+      </nav>
       <p class="footer-copy">&copy; 2025 Zak Consult. All rights reserved.</p>
     </div>
   </footer>
